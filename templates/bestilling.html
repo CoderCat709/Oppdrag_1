@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takk</title>
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <main></main>
+        <h1>Takk for bestillingen, {{ navn }}</h1>
+
+        <p>Tur: {{ tur }}</p>
+        <p>Pris: {{ pris }}</p>
+        <p>Tid: {{ Tid }}</p>
+
+        <img src="{{ url_for('static', filename='images/Logo.png') }}"
+            alt="Flask-logo">
+    </main>
+    <footer>
+        <p>bestill mer?</p>
+        <a href="main.html">Click her</a>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bestilling:</title>
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <main>
+        <section class="bestill">
+            <form method="POST">
+                <label for="gmail">Gmail::</label>
+                <input type="text" id="gmail" name="gmail" required>
+
+                <label for="tur">tur:</label>
+                <select id="tur" name="tur" required>
+                    {% for tur in turer %}
+                        <option value="{{ tur }}">{{ tur }}</option>
+                    {% endfor %}
+                </select>
+
+                <label for="Lengde">Lengde:</label>
+                <input type="number" id="Lengde" name="Lengde" min="1" required>
+
+                <button type="submit">Submitt</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
+</html>
