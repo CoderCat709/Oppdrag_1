@@ -9,11 +9,12 @@
 </head>
 <body>
     <main></main>
-        <h1>Takk for bestillingen, {{ navn }}</h1>
+        <h1>Takk for bestillingen!</h1>
 
         <p>Tur: {{ tur }}</p>
-        <p>Pris: {{ pris }}</p>
-        <p>Tid: {{ Tid }}</p>
+        <p>E-post: {{ gmail }}</p>
+        <p>Pris: {{ pris }} kr</p>
+        <p>Tid: {{ tid }}</p>
 
         <img src="{{ url_for('static', filename='images/Logo.png') }}"
             alt="Flask-logo">

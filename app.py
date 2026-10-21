@@ -2,7 +2,6 @@ from flask import Flask, render_template, request
 import random
 
 app = Flask(__name__)
-number = random.randint(500, 4000) 
 
 
 @app.route("/")
@@ -12,28 +11,25 @@ def main():
 @app.route("/bestill", methods=["GET","POST"])
 def bestill():
 
-    turer = ("Italia","Frankrie","Danmark","Sverige","USA") 
-    priser = ()
-
-    
+    turer = ("Italia", "Frankrike", "Danmark", "Sverige", "USA")
     if request.method == "POST":
         gmail = request.form["gmail"]
         tur = request.form["tur"]
-        pris = request.form.get["x"]
-        kommentar = request.form.get("kommentar", "")
+        tid = request.form["Lengde"]
+        pris = random.randint(500, 4000)
 
         return render_template(
             "bestilling.html",
+            gmail=gmail,
             tur=tur,
             pris=pris,
-            kommentar=kommentar
+            tid=tid,
         )
+
     return render_template(
-    "bestill.html",
-    turer=turer,
+        "bestill.html",
+        turer=turer,
     )
-if __name__ == "__main__":
-    app.run(debug=True)
 
 @app.route("/om")
 def om():
@@ -42,8 +38,6 @@ def om():
 @app.route("/kontakt")
 def kontakt():
     return render_template("kontakt.html")
-    
-
 
 if __name__ == "__main__":
     app.run(debug=True)
