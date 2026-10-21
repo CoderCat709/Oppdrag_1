@@ -12,24 +12,24 @@
         <h1 class="Over">Bestill din drømme reise</h1>   
     </header>
     <nav>
-        <a href="bestill">kjøp:</a>
-        <a href="om">Info</a>
-        <a href="kontakt">Kontakt</a>
-        <a href="main">Main</a>
+        <a href="{{ url_for('bestill') }}">Kjøp</a>
+        <a href="{{ url_for('om') }}">Info</a>
+        <a href="{{ url_for('kontakt') }}">Kontakt</a>
+        <a href="{{ url_for('main') }}">Hjem</a>
     </nav>
     <main>
         <div class="produkt">
-            <div class="produkter"></div>
-            <div class="produkter"></div>
-            <div class="produkter"></div>
-            <div class="produkter"></div>
-            <div class="produkter"></div>
-            <div class="produkter"></div>
-            <div class="produkter"></div>
+            {% for tur, bilde in destinations %}
+                <a class="produkter" href="{{ url_for('bestill') }}">
+                    <img src="{{ url_for('static', filename='Images/' ~ bilde) }}"
+                        alt="Bilde for {{ tur }}">
+                    <span>{{ tur }}</span>
+                </a>
+            {% endfor %}
         </div>
     </main>
     <footer>
-        <a href="kontakt.html">Her kan du finne kontakt info</a>
+        <a href="{{ url_for('kontakt') }}">Kontakt oss</a>
         <p class="foot">Eid og oppretholdt av Henrik Huseby</p>
     </footer>
     

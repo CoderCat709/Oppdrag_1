@@ -3,26 +3,36 @@ import random
 
 app = Flask(__name__)
 
+DESTINATIONS = (
+    ("Italia", "italia.png"),
+    ("Tyskland", "tyskland.png"),
+    ("Frankrike", "france.png"),
+    ("Danmark", "danmark.png"),
+    ("Sverige", "svergie.png"),
+    ("USA", "usa.png"),
+)
+
 
 @app.route("/")
 def main():
-    return render_template("main.html")
+    return render_template("main.html", destinations=DESTINATIONS)
 
 @app.route("/bestill", methods=["GET","POST"])
 def bestill():
-
-    turer = ("Italia", "Frankrike", "Danmark", "Sverige", "USA")
+    turer = tuple(destination for destination, _image in DESTINATIONS)
     if request.method == "POST":
         gmail = request.form["gmail"]
         tur = request.form["tur"]
         tid = request.form["Lengde"]
-        pris = random.randint(500, 4000)
+        person = request.form["person"]
+        pris = random.randint(500, 10000)
 
         return render_template(
             "bestilling.html",
             gmail=gmail,
             tur=tur,
             pris=pris,
+            person=person,
             tid=tid,
         )
 

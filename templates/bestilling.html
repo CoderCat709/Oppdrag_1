@@ -8,20 +8,19 @@
         href="{{ url_for('static', filename='css/style.css')}}">
 </head>
 <body>
-    <main></main>
+    <main>
         <h1>Takk for bestillingen!</h1>
 
         <p>Tur: {{ tur }}</p>
         <p>E-post: {{ gmail }}</p>
         <p>Pris: {{ pris }} kr</p>
         <p>Tid: {{ tid }}</p>
+        <p>Personer: {{ person }}</p>
 
-        <img src="{{ url_for('static', filename='images/Logo.png') }}"
-            alt="Flask-logo">
     </main>
     <footer>
         <p>bestill mer?</p>
-        <a href="main.html">Click her</a>
+        <a href="{{ url_for('main') }}">Tilbake til forsiden</a>
     </footer>
 
 </body>

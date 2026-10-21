@@ -56,5 +56,40 @@ img {
 }
 
 main {
-    background-color: rgb(173, 114, 36);
+    background-color: rgb(25, 29, 68);
+}
+
+.produkt {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    padding: 20px;
+}
+
+.produkter {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 10px;
+    background: white;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+.produkter img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.produkter span {
+    padding: 12px;
+    font-weight: bold;
+}
+
+.produkter:hover,
+.produkter:focus-visible {
+    outline: 3px solid rgb(22, 46, 101);
+    outline-offset: 2px;
 }
