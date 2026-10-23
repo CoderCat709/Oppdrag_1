@@ -24,6 +24,7 @@ def bestill():
         gmail = request.form["gmail"]
         tur = request.form["tur"]
         tid = request.form["Lengde"]
+        dato = request.form["dato"]
         person = request.form["person"]
         pris = random.randint(500, 10000)
 
@@ -32,6 +33,7 @@ def bestill():
             gmail=gmail,
             tur=tur,
             pris=pris,
+            dato=dato,
             person=person,
             tid=tid,
         )

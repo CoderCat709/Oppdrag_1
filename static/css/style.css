@@ -10,6 +10,13 @@ body {
   min-height: 100vh;
 }   
 
+nav {
+    padding: 10px 20px;
+    border: 5px;
+    border-radius: 10px;
+    background-color:rgb(155, 159, 169);
+}
+
 button {
     margin-top: 10px;
     padding: 10px 20px;
@@ -45,7 +52,7 @@ p {
 
 h1 {
     border: 20px;
-    border-radius: 30px;
+    border-radius: 10px;
     background: rgb(159, 159, 159);
     padding: 10px 10px;
 }
@@ -56,7 +63,8 @@ img {
 }
 
 main {
-    background: rgb(159, 159, 159);
+    background: transparent(25%) rgb(38, 44, 137);
+
 }
 
 .produkt {
