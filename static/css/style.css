@@ -15,7 +15,7 @@ button {
     padding: 10px 20px;
     border: 5px;
     border-radius: 20px;
-    background-color:rgb(101, 116, 152);
+    background-color:rgb(155, 159, 169);
 }
 
 label {
@@ -39,14 +39,14 @@ form {
 p {
     border: 5px;
     border-radius: 5px;
-    background: skyblue;
+    background: rgb(159, 159, 159);
     padding: 10px 10px;
 }
 
 h1 {
     border: 20px;
     border-radius: 30px;
-    background: aliceblue;
+    background: rgb(159, 159, 159);
     padding: 10px 10px;
 }
 
@@ -56,7 +56,7 @@ img {
 }
 
 main {
-    background-color: rgb(25, 29, 68);
+    background: rgb(159, 159, 159);
 }
 
 .produkt {
@@ -71,7 +71,7 @@ main {
     flex-direction: column;
     overflow: hidden;
     border-radius: 10px;
-    background: white;
+    background: rgb(159, 159, 159);
     color: black;
     text-align: center;
     text-decoration: none;

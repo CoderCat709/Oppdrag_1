@@ -9,8 +9,21 @@
 </head>
 <body>
     <header>
-        <h1 class="Over">kontakt oss!!</h1>   
+        <h1 class="Over">Kontakt</h1>   
     </header>
-    
+    <nav>
+        <a href="{{ url_for('bestill') }}">Kjøp</a>
+        <a href="{{ url_for('om') }}">Info</a>
+        <a href="{{ url_for('kontakt') }}">Kontakt</a>
+        <a href="{{ url_for('main') }}">Hjem</a>
+    </nav>
+    <main>
+        <h1>Husebys Reiser: Kontakt</h1>
+        <p>Husebys reiser er oppretholdt av Henrik Huseby</p>
+    </main>
+    <footer>
+        <a href="{{ url_for('kontakt') }}">Kontaktinfo</a>
+        <p class="foot">Eid og oppretholdt av Henrik Huseby</p>
+    </footer>
 </body>
 </html>
